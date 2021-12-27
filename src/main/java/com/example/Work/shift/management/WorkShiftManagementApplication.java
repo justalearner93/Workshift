@@ -9,14 +9,9 @@ import com.example.Work.shift.management.entity.Employee;
 import com.example.Work.shift.management.repository.EmployeeRepository;
 
 @SpringBootApplication
-public class WorkShiftManagementApplication extends SpringBootServletInitializer {
-	 @Override
-	 protected SpringApplicationBuilder configure(SpringApplicationBuilder
-	application) {
-	 return application.sources(WorkShiftManagementApplication.class);
-	 }
+public class WorkShiftManagementApplication implements CommandLineRunner {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		SpringApplication.run(WorkShiftManagementApplication.class, args);
 	}
 
