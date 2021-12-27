@@ -14,7 +14,7 @@
 	<name>Work-shift-management</name>
 	<description>Work shift management 2021</description>
 	<properties>
-		<java.version>11</java.version>
+	<java.version>11</java.version>
 	
 	<tomcat.version>8.0.3</tomcat.version>
 	
@@ -34,13 +34,7 @@
 		
 		<dependency>
   			<groupId>org.springframework.boot</groupId>
-  			<artifactId>spring-boot-starter-web</artifactId>
-  			<exclusions>
-   			<exclusion>
-      			<groupId>org.springframework.boot</groupId>
-    			<artifactId>spring-boot-starter-tomcat</artifactId>
-   			</exclusion>
-  			</exclusions>
+    			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
