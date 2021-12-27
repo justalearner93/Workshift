@@ -10,6 +10,12 @@ import com.example.Work.shift.management.repository.EmployeeRepository;
 
 @SpringBootApplication
 public class WorkShiftManagementApplication implements CommandLineRunner {
+	public class Application extends SpringBootServletInitializer {
+ 	@Override
+ 	protected SpringApplicationBuilder configure(SpringApplicationBuilder
+	application) {
+		 return application.sources(Application.class);
+ 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(WorkShiftManagementApplication.class, args);
