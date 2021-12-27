@@ -4,13 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import com.example.Work.shift.management.entity.Employee;
 import com.example.Work.shift.management.repository.EmployeeRepository;
 
 @SpringBootApplication
-public class WorkShiftManagementApplication implements CommandLineRunner {
-
+public class WorkShiftManagementApplication extends SpringBootServletInitializer {
+	 @Override
+	 protected SpringApplicationBuilder configure(SpringApplicationBuilder
+	application) {
+	 return application.sources(WorkShiftManagementApplication.class);
+	 }
 	public static void main(String[] args) {
 		SpringApplication.run(WorkShiftManagementApplication.class, args);
 	}
@@ -18,7 +24,7 @@ public class WorkShiftManagementApplication implements CommandLineRunner {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
-	@Override
+	
 	public void run(String... args) throws Exception {
 		
 			Employee emp1 = new Employee("Trung", "Do", "0406769247", "Masto", "6-14");
