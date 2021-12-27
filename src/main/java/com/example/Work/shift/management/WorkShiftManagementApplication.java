@@ -1,7 +1,6 @@
 package com.example.Work.shift.management;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -17,9 +16,11 @@ public class WorkShiftManagementApplication extends SpringBootServletInitializer
 	application) {
 	 return application.sources(WorkShiftManagementApplication.class);
 	 }
-	public static void main(String[] args) {
-		SpringApplication.run(WorkShiftManagementApplication.class, args);
-	}
+	 
+	 public static void main(String[] args) throws Exception {
+	 		SpringApplication.run(WorkShiftManagementApplication.class, args);
+	 	}
+	
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
